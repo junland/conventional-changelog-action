@@ -6,8 +6,8 @@
 .idea
 
 # Logs
-logs
 *.log
+logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -68,5 +68,4 @@ typings/
 
 # build output
 lib
-
 node_modules
