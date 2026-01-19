@@ -910,8 +910,8 @@ jobs:
           skip-on-empty: "false"
           version-file: "./tests/data/test-file.json"
 
-      - run: test -f tests/pre-commit.test.json || (echo should be here && exit 1)
-      - run: cat tests/pre-commit.test.json && echo ""
+      - run: test -f pre-commit.test.json || (echo should be here && exit 1)
+      - run: cat pre-commit.test.json && echo ""
       - run: cat ./package.json
 
   test-pre-changelog-generation:
@@ -1201,7 +1201,7 @@ jobs:
           fallback-version: "6.5.0"
 
       - name: Test output
-        run: node ./tests/data/test-file-content.js
+        run: node ./tests/test-file-content.js
         env:
           OUTPUT_FILE: "CHANGELOG.md"
           EXPECTED_FILE: "tests/data/test-input-file.md"
