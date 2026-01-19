@@ -942,11 +942,10 @@ jobs:
           pre-changelog-generation: "./tests/test-pre-changelog-generation.js"
           version-file: "./tests/data/test-file.toml"
           version-path: "package.version"
-      - run: find . -name "pre-changelog-generation.*.test.json" -exec echo {} \;
-      - run: test -f tests/data/pre-changelog-generation.version.test.json || (echo should be here && exit 1)
-      - run: test -f tests/data/pre-changelog-generation.tag.test.json || (echo should be here && exit 1)
-      - run: cat tests/data/pre-changelog-generation.version.test.json && echo ""
-      - run: cat tests/data/pre-changelog-generation.tag.test.json && echo ""
+      - run: test -f pre-changelog-generation.version.test.json || (echo should be here && exit 1)
+      - run: test -f pre-changelog-generation.tag.test.json || (echo should be here && exit 1)
+      - run: cat pre-changelog-generation.version.test.json && echo ""
+      - run: cat pre-changelog-generation.tag.test.json && echo ""
       - run: cat ./tests/data/test-file.toml
 
   test-multiple-files:
